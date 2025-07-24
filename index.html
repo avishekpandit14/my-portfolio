@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>My protfolio
+  </title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+    <div id="header">
+        <div class="container">
+        
+            <nav><img src="logo.png" class="logo"> 
+            <ul>
+                <li><a href="#header" class="nav-link ">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            </nav>
+            <!-- Mobile Menu -->
+<div class="mobile-nav">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+            <div id="header-text">
+                <p>Web developer and Content creator</p>
+                <h1>Hi, I'm <span>Avishek kumar pandit</span> <br/>from India </h1>
+
+                <div class="social-icons-professional">
+  <a href="https://instagram.com/avishek_pandit_" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://github.com/avishekpandit" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com/in/avishek-pandit" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://t.me/avishek_pandit" target="_blank"><i class="fas fa-paper-plane"></i></a>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Hamburger Icon for Mobile -->
+<div id="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+  <ul>
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ------------------------------------about me section------------------------------ -->
+<div id="about">
+    <div id="container">
+        <div id="row">
+            <div id="about-colo-1">
+                <img src="aboutimg1.png" alt="">
+            </div>
+        <div id="about-colo-2">
+            <h1 class="subtitle">About me </h1>
+            <p>Hi, I’m Avishek Pandit, a passionate Computer Science student and aspiring Full Stack Developer. I love turning ideas into reality using code. Whether it’s building responsive websites, exploring cybersecurity, or experimenting with AI — I’m always curious and hungry to learn more.
+
+Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS, and diving into backend technologies. Beyond tech, I’m also a content creator and artist who enjoys storytelling through visuals and music.
+        </p>
+        <div class="tab-titles">
+            <p class="tab-links" onclick="opentab(this, 'skills')">Skills</p>
+<p class="tab-links" onclick="opentab(this, 'exprience')">Exprience</p>
+<p class="tab-links" onclick="opentab(this, 'education')">Education</p>
+
+        </div>
+        <div class="table-contents active-tab" id="skills">
+            <ul>
+                <li><span>Web developer</span><br>Desinging full faced websites</li>
+                <li><span>Content creator</span> <br>Youtube and Instagram</li>
+                <li><span>Tech spealist</span><br>Tech product Reviewer</li>
+            </ul>
+        </div>
+        <div class="table-contents" id="exprience">
+            <ul>
+                <li><span>2025 - current</span><br>Google facitator Program </li>
+                <li><span>2024 - current</span> <br>Wrathbound Game startup</li>
+                <li><span>2023 - current</span><br>Youtube </li>
+            </ul>
+        </div>
+        <div class="table-contents" id="education">
+            <ul>
+                <li><span>2028</span><br>GLA University</li>
+                <li><span>2024</span> <br>Asansol North Point School</li>
+                <li><span>2022</span><br>D.A.V. public school , Asansol</li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- -----------------------------services------------------------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My services</h1>
+        <div class="serives-list">
+  <div class="service-box">
+    <i class="fas fa-code"></i>
+    <h2>Web developer</h2>
+    <p>I create clean, responsive websites using HTML, CSS, and JavaScript.</p>
+    <a href="#">Learn more</a>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-laptop-code"></i>
+    <h2>Frontend Design</h2>
+    <p>Beautiful and modern UI/UX layouts for web apps and landing pages.</p>
+    <a href="#">Learn more</a>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-video"></i>
+    <h2>Content Creation</h2>
+    <p>Editing reels and shorts for YouTube and Instagram from scratch.</p>
+    <a href="#">Learn more</a>
+  </div>
+</div>
+
+<!-- -------------------------protfolio----------------------------- -->
+
+<div id="portfolio">
+  <div class="container">
+    <h1 class="subtitle">My Work</h1>
+
+    <!-- 🔷 Image Projects -->
+    <div class="work-list">
+     <div class="work">
+  <a href="https://bright-nasturtium-80069c.netlify.app/" target="_blank" class="work-link">
+  <img src="IMG_20250602_133650836.jpg" alt="Amazon Clone">
+  <div class="work-desc">
+    <i class="fas fa-image work-icon"></i>
+    <h3>Amazon Clone</h3>
+    <p>A visual presentation for UI components.</p>
+    <span class="visit-text">Visit →</span>
+  </div>
+</a>
+</div>
+    <div class="work">
+  <a href="https://www.instagram.com/avishek_pandit_/reels/" target="_blank" class="work-link">
+    <img src="Screenshot 2025-06-19 at 12.02.42 PM.png" alt="project 2">
+    <div class="work-desc">
+      <i class="fas fa-desktop work-icon"></i>
+      <h3>Social</h3>
+      <p>Instagram Insight as a content creator</p>
+      <span class="visit-text">Visit →</span>
+    </div>
+  </a>
+</div>
+    </div>
+
+    <!-- 🔶 Video Project -->
+    
+<div class="work-list video-block">
+  <div class="work">
+    <video controls class="portfolio-video">
+      <source src="WhatsApp Video 2025-02-28 at 12.19.32.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="work-desc">
+      <i class="fas fa-gamepad work-icon"></i>
+      <h3>Wrathbound Game Dev</h3>
+      <p>Horror mobile game preview (UE5) with original design and gameplay preview.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- -----------------------------contact------------------------------------ -->
+<!-- -----------------------------contact------------------------------------ -->
+<div id="contact">
+  <div class="contact-section">
+    <h1 class="subtitle">Contact Me</h1>
+    <p><i class="fas fa-envelope"></i> avishekpandit51@gmail.com</p>
+    <p><i class="fas fa-phone"></i> +91 6296046476</p>
+
+    <!-- Social Icons -->
+    <div class="social-icons centered-icons">
+      <a href="https://instagram.com/avishek_pandit_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/avishekpandit14" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/avishek-pandit-295a6531b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://t.me/avishek_pandit" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+
+    <!-- Google Form Button -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScsY8tqFINBD5H6fgtuZphEvGo7Y1dA8rjpdAiKXzU1Akch3w/viewform?usp=dialog"
+       target="_blank"
+       class="google-form-btn">
+      <i class="fas fa-paper-plane"></i> Fill Contact Form
+    </a>
+  </div>
+</div>
+
+
+<canvas id="fluid"></canvas>
+<!-- partial -->
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tablecontents = document.getElementsByClassName("table-contents");
+
+function opentab(element, tabname) {
+  for (let tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
+  for (let tablecontent of tablecontents) {
+    tablecontent.classList.remove("active-tab");
+  }
+
+  element.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+  </script>
+
+  <!-- -----------------------------footer------------------------------------ -->
+<footer id="footer"  class="footer-hidden">
+  <p>© 2025 Avishek Kumar Pandit. All rights reserved.</p>
+</footer>
+
+
+
+
+</body>
+</html>
