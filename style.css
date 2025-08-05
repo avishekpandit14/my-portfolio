@@ -345,6 +345,16 @@ nav ul li a:hover::before{
 }
 
 
+.gla-logo {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
 /* -------------------portfolio---------------------------- */
 
 #portfolio {
