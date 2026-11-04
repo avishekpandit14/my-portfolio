@@ -2,8 +2,14 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>My protfolio
-  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Avishek Kumar Pandit — Computer Science student, aspiring full-stack developer, and creator. Explore selected web and game projects.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Avishek Kumar Pandit | Portfolio">
+  <meta property="og:description" content="Selected projects and work by Avishek Kumar Pandit.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="./logo.png">
+  <title>Avishek Kumar Pandit | Portfolio</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -12,7 +18,7 @@
     <div id="header">
         <div class="container">
         
-            <nav><img src="logo.png" class="logo"> 
+            <nav aria-label="Main navigation"><a href="#header" aria-label="Avishek Kumar Pandit home"><img src="logo.png" class="logo" alt="Avishek Kumar Pandit"></a> 
             <ul>
                 <li><a href="#header" class="nav-link ">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -23,31 +29,36 @@
             </nav>
             <!-- Mobile Menu -->
 <div class="mobile-nav">
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="sidebar" id="sidebar">
-    <div class="close-btn" onclick="toggleMenu()">
-      <i class="fas fa-times"></i>
-    </div>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-sidebar" onclick="toggleMenu()">
+    <i class="fas fa-bars" aria-hidden="true"></i>
+  </button>
+  <nav class="sidebar" id="mobile-sidebar" aria-label="Mobile navigation" aria-hidden="true" inert>
+    <button class="close-btn" type="button" aria-label="Close navigation menu" onclick="closeMenu()">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#header" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 </div>
             <div id="header-text">
-                <p>Web developer and Content creator</p>
-                <h1>Hi, I'm <span>Avishek kumar pandit</span> <br/>from India </h1>
+                <p class="hero-eyebrow"><span class="accent-dot" aria-hidden="true"></span> Web developer · Content creator · India</p>
+                <h1>Hi, I'm <span>Avishek Kumar Pandit</span><br>Building for the web and beyond.</h2>
+                <p class="hero-summary">Computer Science student exploring full-stack development, creative technology, and thoughtful digital experiences.</p>
+                <div class="hero-actions">
+                  <a class="button button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↘</span></a>
+                  <a class="button button-quiet" href="#contact">Get in touch</a>
+                </div>
 
                 <div class="social-icons-professional">
-  <a href="https://instagram.com/avishek_pandit_" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://github.com/avishekpandit" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="https://linkedin.com/in/avishek-pandit" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="https://t.me/avishek_pandit" target="_blank"><i class="fas fa-paper-plane"></i></a>
+  <a href="https://instagram.com/avishek_pandit_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+  <a href="https://github.com/avishekpandit" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+  <a href="https://linkedin.com/in/avishek-pandit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+  <a href="https://t.me/avishek_pandit" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fas fa-paper-plane" aria-hidden="true"></i></a>
 </div>
             </div>
         </div>
@@ -55,57 +66,41 @@
 
 
 
-
-<!-- Hamburger Icon for Mobile -->
-<div id="menu-toggle" onclick="toggleMenu()">
-  <i class="fas fa-bars"></i>
-</div>
-
-<!-- Sidebar -->
-<div id="sidebar">
-  <ul>
-    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#services" onclick="closeMenu()">Services</a></li>
-    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-  </ul>
-</div>
 
 <!-- ------------------------------------about me section------------------------------ -->
 <div id="about">
     <div id="container">
         <div id="row">
             <div id="about-colo-1">
-                <img src="aboutimg1.png" alt="">
+                <img src="aboutimg1.png" alt="Avishek Pandit, portfolio portrait" loading="lazy" decoding="async">
             </div>
         <div id="about-colo-2">
-            <h1 class="subtitle">About me </h1>
+            <h2 class="subtitle">About me </h2>
             <p>Hi, I’m Avishek Pandit, a passionate Computer Science student and aspiring Full Stack Developer. I love turning ideas into reality using code. Whether it’s building responsive websites, exploring cybersecurity, or experimenting with AI — I’m always curious and hungry to learn more.
 
 Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS, and diving into backend technologies. Beyond tech, I’m also a content creator and artist who enjoys storytelling through visuals and music.
         </p>
-        <div class="tab-titles">
-            <p class="tab-links" onclick="opentab(this, 'skills')">Skills</p>
-<p class="tab-links" onclick="opentab(this, 'exprience')">Exprience</p>
-<p class="tab-links" onclick="opentab(this, 'education')">Education</p>
+        <div class="tab-titles" role="tablist" aria-label="About details">
+            <button type="button" class="tab-links active-link" id="tab-skills" role="tab" aria-selected="true" aria-controls="skills" tabindex="0" onclick="opentab(this, 'skills')">Skills</button>
+<button type="button" class="tab-links" id="tab-experience" role="tab" aria-selected="false" aria-controls="experience" tabindex="-1" onclick="opentab(this, 'experience')">Experience</button>
+<button type="button" class="tab-links" id="tab-education" role="tab" aria-selected="false" aria-controls="education" tabindex="-1" onclick="opentab(this, 'education')">Education</button>
 
         </div>
-        <div class="table-contents active-tab" id="skills">
+        <div class="table-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
             <ul>
-                <li><span>Web developer</span><br>Desinging full faced websites</li>
+                <li><span>Web developer</span><br>Designing full-featured websites</li>
                 <li><span>Content creator</span> <br>Youtube and Instagram</li>
-                <li><span>Tech spealist</span><br>Tech product Reviewer</li>
+                <li><span>Tech specialist</span><br>Tech product Reviewer</li>
             </ul>
         </div>
-        <div class="table-contents" id="exprience">
+        <div class="table-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
             <ul>
                 <li><span>2025 - current</span><br>Google facitator Program </li>
                 <li><span>2024 - current</span> <br>Wrathbound Game startup</li>
                 <li><span>2023 - current</span><br>Youtube </li>
             </ul>
         </div>
-        <div class="table-contents" id="education">
+        <div class="table-contents" id="education" role="tabpanel" aria-labelledby="tab-education">
             <ul>
                 <li><span>2028</span><br>GLA University</li>
                 <li><span>2024</span> <br>Asansol North Point School</li>
@@ -121,41 +116,47 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
 
 <div id="services">
     <div class="container">
-        <h1 class="subtitle">My services</h1>
+        <p class="section-kicker">What I do</p>
+        <h2 class="subtitle">Ways I can help</h2>
         <div class="serives-list">
   <div class="service-box">
     <i class="fas fa-code"></i>
     <h2>Web developer</h2>
     <p>I create clean, responsive websites using HTML, CSS, and JavaScript.</p>
-    <a href="#">Learn more</a>
+    <a href="#contact">Discuss a project</a>
   </div>
 
   <div class="service-box">
     <i class="fas fa-laptop-code"></i>
     <h2>Frontend Design</h2>
     <p>Beautiful and modern UI/UX layouts for web apps and landing pages.</p>
-    <a href="#">Learn more</a>
+    <a href="#contact">Discuss a project</a>
   </div>
 
   <div class="service-box">
     <i class="fas fa-video"></i>
     <h2>Content Creation</h2>
     <p>Editing reels and shorts for YouTube and Instagram from scratch.</p>
-    <a href="#">Learn more</a>
+    <a href="#contact">Discuss a project</a>
   </div>
 </div>
+    </div>
+</div>
 
-<!-- -------------------------protfolio----------------------------- -->
+<!-- -------------------------portfolio----------------------------- -->
 
 <div id="portfolio">
   <div class="container">
-    <h1 class="subtitle">My Work</h1>
+    <p class="section-kicker">Selected work</p>
+    <h2 class="subtitle">Projects &amp; experiments</h2>
+    <p class="section-intro">A few things I have been building across web development and game design.</p>
 
     <!-- 🔷 Image Projects -->
     <div class="work-list">
-     <div class="work">
-  <a href="https://bright-nasturtium-80069c.netlify.app/" target="_blank" class="work-link">
-  <img src="IMG_20250602_133650836.jpg" alt="Amazon Clone">
+     <div class="work project-card">
+  <span class="project-index" aria-hidden="true">01</span>
+  <a href="https://bright-nasturtium-80069c.netlify.app/" target="_blank" rel="noopener noreferrer" class="work-link">
+  <img src="IMG_20250602_133650836.jpg" alt="Amazon Clone project preview" loading="lazy" decoding="async">
   <div class="work-desc">
     <i class="fas fa-image work-icon"></i>
     <h3>Amazon Clone</h3>
@@ -164,9 +165,10 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
   </div>
 </a>
 </div>
-    <div class="work">
-  <a href="https://glanotesportal.netlify.app/" target="_blank" class="work-link">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/42/GLA_University_logo.png" alt="GLA University Logo" style="width: 100%; height: auto; max-height: 240px; object-fit: contain; background-color: white;">
+    <div class="work project-card">
+  <span class="project-index" aria-hidden="true">02</span>
+  <a href="https://glanotesportal.netlify.app/" target="_blank" rel="noopener noreferrer" class="work-link">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/42/GLA_University_logo.png" alt="GLA University logo" loading="lazy" decoding="async">
     <div class="work-desc">
       <i class="fas fa-desktop work-icon"></i>
       <h3>University Notes Portal</h3>
@@ -183,7 +185,7 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
     
 <div class="work-list video-block">
   <div class="work">
-    <video controls class="portfolio-video">
+    <video controls preload="none" playsinline class="portfolio-video">
       <source src="WhatsApp Video 2025-02-28 at 12.19.32.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -194,27 +196,30 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
     </div>
   </div>
 </div>
-
+</div>
+    </div>
+</div>
 
 <!-- -----------------------------contact------------------------------------ -->
 <!-- -----------------------------contact------------------------------------ -->
 <div id="contact">
   <div class="contact-section">
-    <h1 class="subtitle">Contact Me</h1>
-    <p><i class="fas fa-envelope"></i> avishekpandit51@gmail.com</p>
-    <p><i class="fas fa-phone"></i> +91 6296046476</p>
+    <h2 class="subtitle">Contact Me</h2>
+    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:avishekpandit51@gmail.com">avishekpandit51@gmail.com</a></p>
+    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+916296046476">+91 6296046476</a></p>
 
     <!-- Social Icons -->
     <div class="social-icons centered-icons">
-      <a href="https://instagram.com/avishek_pandit_" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/avishekpandit14" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/avishek-pandit-295a6531b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://t.me/avishek_pandit" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://instagram.com/avishek_pandit_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://github.com/avishekpandit14" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/avishek-pandit-295a6531b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://t.me/avishek_pandit" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
     </div>
 
     <!-- Google Form Button -->
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScsY8tqFINBD5H6fgtuZphEvGo7Y1dA8rjpdAiKXzU1Akch3w/viewform?usp=dialog"
        target="_blank"
+       rel="noopener noreferrer"
        class="google-form-btn">
       <i class="fas fa-paper-plane"></i> Fill Contact Form
     </a>
@@ -229,25 +234,22 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script  src="./script.js"></script>
   <script>
-var tablinks = document.getElementsByClassName("tab-links");
-var tablecontents = document.getElementsByClassName("table-contents");
-
 function opentab(element, tabname) {
-  for (let tablink of tablinks) {
-    tablink.classList.remove("active-link");
-  }
-  for (let tablecontent of tablecontents) {
-    tablecontent.classList.remove("active-tab");
-  }
-
-  element.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
+  document.querySelectorAll(".tab-links").forEach(tab => {
+    const selected = tab === element;
+    tab.classList.toggle("active-link", selected);
+    tab.setAttribute("aria-selected", String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
+  document.querySelectorAll(".table-contents").forEach(panel => {
+    panel.classList.toggle("active-tab", panel.id === tabname);
+  });
 }
   </script>
 
   <!-- -----------------------------footer------------------------------------ -->
 <footer id="footer"  class="footer-hidden">
-  <p>© 2025 Avishek Kumar Pandit. All rights reserved.</p>
+  <p>© 2026 Avishek Kumar Pandit. All rights reserved.</p>
 </footer>
 
 
