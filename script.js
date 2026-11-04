@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     initFluid();
 });
 
@@ -42,6 +43,7 @@ const initFluid = () => {
     pointers.push(new pointerPrototype());
 
     const { gl, ext } = getWebGLContext(canvas);
+    if (!gl || !ext) return;
 
     if (!ext.supportLinearFiltering) {
         config.DYE_RESOLUTION = 512;
@@ -55,6 +57,7 @@ const initFluid = () => {
         const isWebGL2 = !!gl;
         if (!isWebGL2)
             gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+        if (!gl) return { gl: null, ext: null };
 
         let halfFloat;
         let supportLinearFiltering;
@@ -1144,10 +1147,22 @@ const initFluid = () => {
 
 
   function toggleMenu() {
-    document.getElementById("sidebar").classList.toggle("active");
+    const sidebar = document.getElementById("mobile-sidebar");
+    const button = document.querySelector(".menu-toggle");
+    const isOpen = sidebar.classList.toggle("active");
+    sidebar.setAttribute("aria-hidden", String(!isOpen));
+    button.setAttribute("aria-expanded", String(isOpen));
   }
 
   function closeMenu() {
-    document.getElementById("sidebar").classList.remove("active");
+    const sidebar = document.getElementById("mobile-sidebar");
+    const button = document.querySelector(".menu-toggle");
+    sidebar.classList.remove("active");
+    sidebar.setAttribute("aria-hidden", "true");
+    button.setAttribute("aria-expanded", "false");
   }
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMenu();
+  });
 
