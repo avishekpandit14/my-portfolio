@@ -46,8 +46,13 @@
   </nav>
 </div>
             <div id="header-text">
-                <p>Web developer and Content creator</p>
-                <h1>Hi, I'm <span>Avishek kumar pandit</span> <br/>from India </h1>
+                <p class="hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> Web developer · Content creator · India</p>
+                <h1>Hi, I'm <span>Avishek Kumar Pandit</span><br>Building for the web and beyond.</h2>
+                <p class="hero-summary">Computer Science student exploring full-stack development, creative technology, and thoughtful digital experiences.</p>
+                <div class="hero-actions">
+                  <a class="button button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↘</span></a>
+                  <a class="button button-quiet" href="#contact">Get in touch</a>
+                </div>
 
                 <div class="social-icons-professional">
   <a href="https://instagram.com/avishek_pandit_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
@@ -70,32 +75,32 @@
                 <img src="aboutimg1.png" alt="Avishek Pandit, portfolio portrait" loading="lazy" decoding="async">
             </div>
         <div id="about-colo-2">
-            <h1 class="subtitle">About me </h1>
+            <h2 class="subtitle">About me </h2>
             <p>Hi, I’m Avishek Pandit, a passionate Computer Science student and aspiring Full Stack Developer. I love turning ideas into reality using code. Whether it’s building responsive websites, exploring cybersecurity, or experimenting with AI — I’m always curious and hungry to learn more.
 
 Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS, and diving into backend technologies. Beyond tech, I’m also a content creator and artist who enjoys storytelling through visuals and music.
         </p>
-        <div class="tab-titles">
-            <button type="button" class="tab-links active-link" role="tab" aria-selected="true" tabindex="0" onclick="opentab(this, 'skills')">Skills</button>
-<button type="button" class="tab-links" role="tab" aria-selected="false" tabindex="-1" onclick="opentab(this, 'experience')">Experience</button>
-<button type="button" class="tab-links" role="tab" aria-selected="false" tabindex="-1" onclick="opentab(this, 'education')">Education</button>
+        <div class="tab-titles" role="tablist" aria-label="About details">
+            <button type="button" class="tab-links active-link" id="tab-skills" role="tab" aria-selected="true" aria-controls="skills" tabindex="0" onclick="opentab(this, 'skills')">Skills</button>
+<button type="button" class="tab-links" id="tab-experience" role="tab" aria-selected="false" aria-controls="experience" tabindex="-1" onclick="opentab(this, 'experience')">Experience</button>
+<button type="button" class="tab-links" id="tab-education" role="tab" aria-selected="false" aria-controls="education" tabindex="-1" onclick="opentab(this, 'education')">Education</button>
 
         </div>
-        <div class="table-contents active-tab" id="skills">
+        <div class="table-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
             <ul>
                 <li><span>Web developer</span><br>Designing full-featured websites</li>
                 <li><span>Content creator</span> <br>Youtube and Instagram</li>
                 <li><span>Tech specialist</span><br>Tech product Reviewer</li>
             </ul>
         </div>
-        <div class="table-contents" id="experience">
+        <div class="table-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
             <ul>
                 <li><span>2025 - current</span><br>Google facitator Program </li>
                 <li><span>2024 - current</span> <br>Wrathbound Game startup</li>
                 <li><span>2023 - current</span><br>Youtube </li>
             </ul>
         </div>
-        <div class="table-contents" id="education">
+        <div class="table-contents" id="education" role="tabpanel" aria-labelledby="tab-education">
             <ul>
                 <li><span>2028</span><br>GLA University</li>
                 <li><span>2024</span> <br>Asansol North Point School</li>
@@ -111,7 +116,8 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
 
 <div id="services">
     <div class="container">
-        <h1 class="subtitle">My services</h1>
+        <p class="section-kicker">What I do</p>
+        <h2 class="subtitle">Ways I can help</h2>
         <div class="serives-list">
   <div class="service-box">
     <i class="fas fa-code"></i>
@@ -134,16 +140,21 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
     <a href="#contact">Discuss a project</a>
   </div>
 </div>
+    </div>
+</div>
 
-<!-- -------------------------protfolio----------------------------- -->
+<!-- -------------------------portfolio----------------------------- -->
 
 <div id="portfolio">
   <div class="container">
-    <h1 class="subtitle">My Work</h1>
+    <p class="section-kicker">Selected work</p>
+    <h2 class="subtitle">Projects &amp; experiments</h2>
+    <p class="section-intro">A few things I have been building across web development and game design.</p>
 
     <!-- 🔷 Image Projects -->
     <div class="work-list">
-     <div class="work">
+     <div class="work project-card">
+  <span class="project-index" aria-hidden="true">01</span>
   <a href="https://bright-nasturtium-80069c.netlify.app/" target="_blank" rel="noopener noreferrer" class="work-link">
   <img src="IMG_20250602_133650836.jpg" alt="Amazon Clone project preview" loading="lazy" decoding="async">
   <div class="work-desc">
@@ -154,9 +165,10 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
   </div>
 </a>
 </div>
-    <div class="work">
+    <div class="work project-card">
+  <span class="project-index" aria-hidden="true">02</span>
   <a href="https://glanotesportal.netlify.app/" target="_blank" rel="noopener noreferrer" class="work-link">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/42/GLA_University_logo.png" alt="GLA University Logo" style="width: 100%; height: auto; max-height: 240px; object-fit: contain; background-color: white;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/42/GLA_University_logo.png" alt="GLA University logo" loading="lazy" decoding="async">
     <div class="work-desc">
       <i class="fas fa-desktop work-icon"></i>
       <h3>University Notes Portal</h3>
@@ -184,13 +196,15 @@ Currently pursuing my B.Tech in CSE, I spend my time mastering C/C++, HTML, CSS,
     </div>
   </div>
 </div>
-
+</div>
+    </div>
+</div>
 
 <!-- -----------------------------contact------------------------------------ -->
 <!-- -----------------------------contact------------------------------------ -->
 <div id="contact">
   <div class="contact-section">
-    <h1 class="subtitle">Contact Me</h1>
+    <h2 class="subtitle">Contact Me</h2>
     <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:avishekpandit51@gmail.com">avishekpandit51@gmail.com</a></p>
     <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+916296046476">+91 6296046476</a></p>
 
@@ -235,7 +249,7 @@ function opentab(element, tabname) {
 
   <!-- -----------------------------footer------------------------------------ -->
 <footer id="footer"  class="footer-hidden">
-  <p>© 2025 Avishek Kumar Pandit. All rights reserved.</p>
+  <p>© 2026 Avishek Kumar Pandit. All rights reserved.</p>
 </footer>
 
 
