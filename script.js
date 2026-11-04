@@ -1151,6 +1151,7 @@ const initFluid = () => {
     const button = document.querySelector(".menu-toggle");
     const isOpen = sidebar.classList.toggle("active");
     sidebar.setAttribute("aria-hidden", String(!isOpen));
+    sidebar.inert = !isOpen;
     button.setAttribute("aria-expanded", String(isOpen));
   }
 
@@ -1159,6 +1160,7 @@ const initFluid = () => {
     const button = document.querySelector(".menu-toggle");
     sidebar.classList.remove("active");
     sidebar.setAttribute("aria-hidden", "true");
+    sidebar.inert = true;
     button.setAttribute("aria-expanded", "false");
   }
 
