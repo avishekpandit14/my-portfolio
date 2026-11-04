@@ -14,10 +14,9 @@ html {
 body {
   background-color: #000;
   
-  width: 100dvw;
-  height: 200dvh;
-  overflow: hidden;
-  overflow-y: auto;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #header {
@@ -166,7 +165,8 @@ nav ul li a:hover::before{
   max-width: 500px;
   height: auto;
   display: block;
-  margin-left: 90px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #about-colo-2 h1{
@@ -256,6 +256,9 @@ nav ul li a:hover::before{
 }
 
 .tab-links {
+  border: 0;
+  background: transparent;
+  font: inherit;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -584,6 +587,11 @@ nav ul li a:hover::before{
     font-size: 18px;
   }
 
+  #header-text {
+    margin-top: 70px;
+    font-size: 24px;
+  }
+
   .container {
     padding: 0 5%;
   }
@@ -819,7 +827,7 @@ nav ul li a:hover::before{
 
 .social-icons-professional {
   position: relative;   /* ✅ Important */
-  z-index: -2;  
+  z-index: 1;  
   display: flex;
   justify-content: left;
   gap: 30px;
@@ -849,4 +857,21 @@ nav ul li a:hover::before{
   transform: scale(1.1);
   box-shadow: 0 0 12px rgba(255, 0, 79, 0.5);
   border: 1.5px solid #ff004f;
+}
+
+/* Keyboard focus and motion preferences */
+:focus-visible {
+  outline: 3px solid #ff7b8a;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
